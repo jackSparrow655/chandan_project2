@@ -97,7 +97,7 @@ const CartPage = () => {
       navigate('/bills')
     }catch(error){
       message.error('Something went wrong')
-      console.log(error)
+    //   console.log(error)
     }
 
   };
@@ -116,7 +116,7 @@ const CartPage = () => {
         </Button>
         <Modal
           title="Generate Invoice"
-          visible={billPopup}
+          open={billPopup}
           onCancel={() => setBillPopup(false)}
           footer={false}
         >

@@ -22,7 +22,7 @@ const BillsPage = () => {
       dispatch({ type: "HIDE_LOADING" });
     } catch (error) {
       dispatch({ type: "HIDE_LOADING" });
-      console.log("Error fetching bills:", error);
+    //   console.log("Error fetching bills:", error);
     }
   };
 
@@ -63,7 +63,7 @@ const BillsPage = () => {
       <Table columns={columns} dataSource={billsData} bordered />
       <Modal
         title="Invoice Details"
-        visible={popupModal}
+        open={popupModal}
         onCancel={() => setPopupModal(false)}
         footer={null}
       >

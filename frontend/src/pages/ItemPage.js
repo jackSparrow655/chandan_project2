@@ -27,8 +27,8 @@ const ItemPage = () => {
       dispatch({
         type: "HIDE_LOADING",
       });
-      console.log(error);
-      console.log("An error occurred while fetching items.");
+    //   console.log(error);
+    //   console.log("An error occurred while fetching items.");
     }
   },[dispatch]);
   useEffect(() => {
@@ -54,7 +54,7 @@ const ItemPage = () => {
         type: "HIDE_LOADING",
       });
       message.error("something went wrong");
-      console.log(error);
+    //   console.log(error);
     }
   };
 
@@ -108,7 +108,7 @@ const ItemPage = () => {
           type: "HIDE_LOADING",
         });
         message.error("something went wrong");
-        console.log(error);
+        // console.log(error);
       }
     } else {
       try {
@@ -130,7 +130,7 @@ const ItemPage = () => {
           type: "HIDE_LOADING",
         });
         message.error("something went wrong");
-        console.log(error);
+        // console.log(error);
       }
     }
   };

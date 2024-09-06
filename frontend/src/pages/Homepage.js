@@ -34,10 +34,10 @@ const Homepage = () => {
         dispatch({
           type:'HIDE_LOADING'
         });
-        console.log(data);
+        // console.log(data);
       } catch (error) {
-        console.log(error);
-        console.log("kch glti ho gya");
+        // console.log(error);
+        // console.log("kch glti ho gya");
       }
     };
     getAllItems();
@@ -45,8 +45,8 @@ const Homepage = () => {
   return (
    <DefaultLayout>
    <div className="d-flex">
-      {categories.map((category)=>(
-        <div key={category.name} className={`d-flex category ${
+      {categories.map((category, index)=>(
+        <div key={index} className={`d-flex category ${
           selectedCategory ===category.name&&"category-active"
         }`} onClick={()=> setSelectedCategory(category.name)}>
         <h4>{category.name}</h4>
@@ -62,8 +62,8 @@ const Homepage = () => {
    </div>
     <Row>
           {
-            itemsData.filter(i=> i.category===selectedCategory).map((item) => (
-              <Col xs={24} lg={6} md={12} sm={6}>
+            itemsData.filter(i=> i.category===selectedCategory).map((item, index) => (
+              <Col key={index} xs={24} lg={6} md={12} sm={6}>
                 <ItemList item={item} />
               </Col>
             ))
