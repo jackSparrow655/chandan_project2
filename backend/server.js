@@ -20,7 +20,9 @@ const app = express();
 //middlwares
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000",
+        'https://chandan-project2-frontend.onrender.com'
+    ],
     methods:['GET','POST','PUT','DELETE','PUT'],
     credentials: true,
   })
